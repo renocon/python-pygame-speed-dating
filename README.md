@@ -52,3 +52,29 @@ The usual operators you've seen in Java/C/etc are all here as well:
 # In Python, exponents use **
 2 ** 5 # = 32
 ```
+
+# Booleans
+
+# Strings
+
+# Lists
+
+## Fun with Indices
+
+# Tuples
+
+# Dictionaries
+
+# If-Elif-Else
+
+# For loop
+
+# While loop
+
+# List Comprehensions
+
+# Lambda, Map and Filter
+
+# Functions
+
+# Classes and Objects
