@@ -50,12 +50,56 @@ The usual operators you've seen in Java/C/etc are all here as well:
 3 // 2 # = 1
 
 # In Python, exponents use **
-2 ** 5 # = 32
+2**5 # = 32
 ```
 
-# Booleans
-
 # Strings
+
+# Booleans
+Python has two boolean values: True and False. Booleans inherit from integers,
+so you can add and multiply them like numbers. True is 1 and False is 0
+
+```python
+True + True # = 2
+True * 7 # = 7
+False - 5 # 0
+```
+
+## Conditions
+Well Booleans aren't fun for additions and other mathematical operators. We use
+them to test for truthfullness. Or truthiness. Truth. We can write expressions
+which evaluate to True or False:
+
+```python
+True and True # = True, using and is much easier than && right?
+True or False # = True, more English words please
+not True # = False
+```
+
+We can do comparisons on other Data Types as well
+
+```python
+8 == 2 * 4 # = True, == test equality, strings can be tested as well
+'hi' == "  hi\t".strip() # strip function removes whitespace characters
+
+2**7 != 64 # = True, test inequality
+
+# Greater than or less than
+4 > 2
+19 < 19.5
+
+# Greater/less than or equal to
+23 >= 23
+-42 <= -37
+
+# Python also has "is". People use it interchangeably with == but that's not
+# entirely correct. The is keyword checks if the two things being compared 
+# points to the same object. == checks if two values being referenced have the
+# same value
+1000 is 10**3
+1000  == 10**3
+
+```
 
 # Lists
 
