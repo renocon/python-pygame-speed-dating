@@ -54,6 +54,39 @@ The usual operators you've seen in Java/C/etc are all here as well:
 ```
 
 # Strings
+Strings can be represented with either single or double quotes
+
+
+```python
+'hi there'
+"doing ok"
+'what a horrible, invalid string!" # This wouldn't work
+# The important thing is to be consistent. Pick one and keep up with it!
+
+# You can concatenate strings with the plus sign
+'hello ' + 'world' # hello world
+
+# You can also repeat a string with the multiply sign
+'Nana ' * 4 + 'Batman!'
+```
+
+Some strings are really long. Actually, it's common Python convention to put a 
+long string immediately after the first line of a module, function, class or
+method definition. Long strings are used as docstring
+
+```python
+'''
+Roses are red
+Violets are blue
+Doubles with mango is sweet
+But not as good as you
+'''
+# Do not recite the above lines to someone else please...
+"""
+Docstrings normally use double quotes.
+We'll maintain that convention for this course
+"""
+```
 
 # Booleans
 Python has two boolean values: True and False. Booleans inherit from integers,
