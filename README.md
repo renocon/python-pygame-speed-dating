@@ -156,6 +156,9 @@ things_guaranteed_in_life += ['call of duty']
 
 # Lists can have multiple data types stored in it
 random_list_of_things = [88.9, 'the meaning of life', 42, False]
+
+# Lists can be nested
+matrix = [[0,0,0], [1,1,1], [-543, -989, -471]]
 ```
 
 You can access individual elements by a list as follows:
@@ -168,7 +171,30 @@ things_guaranteed_in_life[-1] # 'call of duty'
 things_guaranteed_in_life[-3] # 'a new fifa game every year'
 ```
 
+## More List Methods
+```python
+l1 = ['a', 'b', 'c', 'e']
+# While append adds to end of the list, you can insert to a particular index
+l1.insert(3, 'd') # l1 = ['a', 'b', 'c', 'd', 'e']
+
+# You can remove items
+l1.remove('b') # l1 = ['a', 'c', 'd', 'e']
+
+# Pop removes and returns the last item in the list
+l1.pop() # 'e', l1 = ['a', 'c', 'd']
+# pop(i) removes and returns an element at position i
+
+# Sort is a breeze
+l2 = [7, 0.5, 23, 9]
+l2.sort() # l2 = [0.5, 7, 9, 23]
+
+# As well as reversing
+l2.reverse() # l2 = [23, 9, 7, 0.5]
+
+```
+
 ## Fun with Indices
+
 
 # Tuples
 
