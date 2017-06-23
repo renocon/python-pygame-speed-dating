@@ -68,6 +68,15 @@ Strings can be represented with either single or double quotes
 
 # You can also repeat a string with the multiply sign
 'Nana ' * 4 + 'Batman!'
+
+# You can also access elements of a string by their index (starts from 0)
+big_whale = 'Moby Dick'
+big_whale[0] # 'M'
+big_whale[5] # 'D'
+
+# You can use negative indices to access elements from the right of the string
+big_whale[-1] # 'k'
+big_whale[-3] # 'i'
 ```
 
 Some strings are really long. Actually, it's common Python convention to put a 
@@ -165,8 +174,6 @@ You can access individual elements by a list as follows:
 ```python
 things_guaranteed_in_life[0] # 'death'
 things_guaranteed_in_life[3] # 'another transformers movie'
-
-# You can use negative indices to access elements from the right of the list
 things_guaranteed_in_life[-1] # 'call of duty'
 things_guaranteed_in_life[-3] # 'a new fifa game every year'
 ```
