@@ -129,12 +129,44 @@ We can do comparisons on other Data Types as well
 # entirely correct. The is keyword checks if the two things being compared 
 # points to the same object. == checks if two values being referenced have the
 # same value
-1000 is 10**3
-1000  == 10**3
-
+1000 is 10**3 # False
+1000  == 10**3 # True
+# Python caches small numerical and string objects, so is can work for some
+# values. Be wary as many a bad bugs can arise as a result
 ```
+In addition to the docs, you can read this about is:
+https://stackoverflow.com/questions/132988/is-there-a-difference-between-and-is-in-python
 
 # Lists
+Lists are awesome containers for storing a variety of objects
+
+```python
+things_guaranteed_in_life = ['death', 'taxes', 'a new fifa game every year']
+
+# You can add an item to a list by the append method
+things_guaranteed_in_life.append('another transformers movie')
+
+# You can extend the list with another list via plus
+things_guaranteed_in_life + ['call of duty']
+# Note that the above doesn't change the list contents, if you want it saved
+# then you'll have to assign a variable to that value
+things_guaranteed_in_life = things_guaranteed_in_life + ['call of duty']
+# Or for brevity's sake
+things_guaranteed_in_life += ['call of duty']
+
+# Lists can have multiple data types stored in it
+random_list_of_things = [88.9, 'the meaning of life', 42, False]
+```
+
+You can access individual elements by a list as follows:
+```python
+things_guaranteed_in_life[0] # 'death'
+things_guaranteed_in_life[3] # 'another transformers movie'
+
+# You can use negative indices to access elements from the right of the list
+things_guaranteed_in_life[-1] # 'call of duty'
+things_guaranteed_in_life[-3] # 'a new fifa game every year'
+```
 
 ## Fun with Indices
 
