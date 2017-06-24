@@ -170,7 +170,7 @@ random_list_of_things = [88.9, 'the meaning of life', 42, False]
 matrix = [[0,0,0], [1,1,1], [-543, -989, -471]]
 ```
 
-You can access individual elements by a list as follows:
+You can access individual elements of a list like you did with strings
 ```python
 things_guaranteed_in_life[0] # 'death'
 things_guaranteed_in_life[3] # 'another transformers movie'
@@ -200,8 +200,56 @@ l2.reverse() # l2 = [23, 9, 7, 0.5]
 
 ```
 
-## Fun with Indices
+## Fun With Indices
+You can do really cool things with strings and lists in Python. Recall how to
+access a single element of a list `example_list_or_string[4]`. Well we can slice
+the list or string in various ways. 
 
+```python
+fruits = ['banana', 'mango', 'tomato', 'plum', 'guava']
+# Yes tomatoes are fruits, good grief
+
+# Let's get all but the first fruit
+fruits[1:] # ['mango', 'tomato', 'plum', 'guava']
+
+# All but the last fruit
+fruits[:4] # ['banana', 'mango', 'tomato', 'plum']
+
+# Let's get every other fruit i.e. skip mango and plum
+fruits[::2] # ['banana', 'tomato', 'guava']
+
+# So there we go with the slicing: list_or_string[start:end:step]
+# If nothing is put for start it defaults to begining of the list
+# End defaults to the end (this felt too obvious) and step defaults to 1
+fruits += ['sapodilla', 'cantaloupe', 'breadfruit', 'ackee', 'soursop']
+
+# Let's get every other fruit from mango till breadfruit
+fruits[1:8:2] # ['mango', 'plum', 'sapodilla', 'breadfruit']
+
+# Start at the index of the first item you want
+# End at the index of the last item you want plus 1
+# Step in the name of love
+
+# You can use negative indices here as well
+fruits[-5:-1] # ['sapodilla', 'cantaloupe', 'breadfruit', 'ackee']
+fruits[4:-2] # ['guava', 'sapodilla', 'cantaloupe', 'breadfruit']
+# Think about why the above works!
+
+# How to reverse a list in Python the awesome way?
+fruits[::-1]
+
+# Don't forget this also applies to strings!
+mvp = 'LeBron James'
+mvp[:5] # LeBro
+mvp[::-1] # 'semaJ norBeL'
+```
+
+## Length
+List and string length can be derived from the len function
+```python
+len(fruits) # 10
+len(mvp) # 12
+```
 
 # Tuples
 
