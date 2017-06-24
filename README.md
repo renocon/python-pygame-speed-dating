@@ -77,6 +77,10 @@ big_whale[5] # 'D'
 # You can use negative indices to access elements from the right of the string
 big_whale[-1] # 'k'
 big_whale[-3] # 'i'
+
+# Strings are immutable
+sing_along = 'can\'t touch this' # Escape ' to use them in single quotes
+sing_along[2] = 'u' # TypeError: 'str' object does not support item assignment
 ```
 
 Some strings are really long. Actually, it's common Python convention to put a 
@@ -178,6 +182,12 @@ things_guaranteed_in_life[-1] # 'call of duty'
 things_guaranteed_in_life[-3] # 'a new fifa game every year'
 ```
 
+Unlike strings, list are mutable
+```python
+random_list_of_things[1] = 'inside out'
+random_list_of_things # [88.9, 'inside out', 42, False]
+```
+
 ## More List Methods
 ```python
 l1 = ['a', 'b', 'c', 'e']
@@ -252,8 +262,73 @@ len(mvp) # 12
 ```
 
 # Tuples
+These are immutable collection of items that are encapsulated by parentheses
+```python
+x_coordinate = (4, 9)
+# Access them by [] like with strings and lists
+x_coordinate[0] # 4
+
+# They can contain various types of data
+character = ('mario mario', 25, ['super mario', 'mario galaxy', 'mario kart'])
+
+# And can be nested as well
+line_coordinates = ((-6, 3), (-18, 9))
+
+# You can add elements to tuples
+x_o = ('x',) # So a tuple with a single element needs to trailing comma
+# There really is no purpose for a tuple with a single element -_-
+x_o += ('o',) # ('x', 'o')
+```
+
+Wait a minute, tuples are immutable so why are we changing them? Well the + 
+operator is actually creating a new tuple. So this is a new object all together,
+the object reference for ('x',) is still intact. Let's also consider the
+following
+```python
+spell_it_out = (3, ['one', 'two', 'three'])
+spell_it_out[0] = 5 # TypeError, can't change the first number to anything else
+spell_it_out[1].append('four') # Works
+```
+
+We get an error for trying to change the number because numbers are immutable 
+objects. Lists on the other hand are mutable objects. So we can modify the list
+without affecting the list's object reference. 
 
 # Dictionaries
+A dictionary is an unordered collection of key value pairs. Keys must be unique
+in a dictionary and can be any immutable value (actually, the key should be
+hashable - all built-in immutable objects are thankfully). Dictionaries 
+themselves are mutable.
+
+```python
+# Movie ratings out of 10
+movie_ratings = {
+    'transformers': -10,
+    'logan': 8.5,
+    'assasin creed': '4.5',
+    'fate of the furious': '2'
+}
+
+# We use [] to access elements as well
+movie_ratings['logan'] # 8.5
+
+# We can just as easily change values
+movie_ratings['transformers'] = -20
+
+# We can get all the keys from the dictionary
+movie_ratings.keys() # Returns dict_keys object
+
+# You may want the keys as a list, simply convert it
+list(movie_ratings.keys())
+
+# Extracting all the values is just as easy:
+movie_ratings.values() # Returns dict_values object
+list(movie_ratings.values())
+
+# To find out if in an key is in a dictionary use the in keyword
+'logan' in movie_ratings # True
+'titanic' in movie_ratings # False
+```
 
 # If-Elif-Else
 
