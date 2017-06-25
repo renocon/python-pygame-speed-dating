@@ -33,7 +33,6 @@ indentation we'll be use 4 spaces as guided by
 # Numbers
 The usual operators you've seen in Java/C/etc are all here as well:
 +, -, *, /, %. Run Python on your shell `python3` and type the following:
-
 ```python    
 5 + 3 # = 8
 2 * 8 # = 16
@@ -55,8 +54,6 @@ The usual operators you've seen in Java/C/etc are all here as well:
 
 # Strings
 Strings can be represented with either single or double quotes
-
-
 ```python
 'hi there'
 "doing ok"
@@ -86,7 +83,6 @@ sing_along[2] = 'u' # TypeError: 'str' object does not support item assignment
 Some strings are really long. Actually, it's common Python convention to put a 
 long string immediately after the first line of a module, function, class or
 method definition. Long strings are used as docstring
-
 ```python
 '''
 Roses are red
@@ -104,7 +100,6 @@ We'll maintain that convention for this course
 # Booleans
 Python has two boolean values: True and False. Booleans inherit from integers,
 so you can add and multiply them like numbers. True is 1 and False is 0
-
 ```python
 True + True # = 2
 True * 7 # = 7
@@ -115,7 +110,6 @@ False - 5 # 0
 Well Booleans aren't fun for additions and other mathematical operators. We use
 them to test for truthfullness. Or truthiness. Truth. We can write expressions
 which evaluate to True or False:
-
 ```python
 True and True # = True, using and is much easier than && right?
 True or False # = True, more English words please
@@ -123,7 +117,6 @@ not True # = False
 ```
 
 We can do comparisons on other Data Types as well
-
 ```python
 8 == 2 * 4 # = True, == test equality, strings can be tested as well
 'hi' == "  hi\t".strip() # strip function removes whitespace characters
@@ -147,12 +140,12 @@ We can do comparisons on other Data Types as well
 # Python caches small numerical and string objects, so is can work for some
 # values. Be wary as many a bad bugs can arise as a result
 ```
+
 In addition to the docs, you can read this about is:
 https://stackoverflow.com/questions/132988/is-there-a-difference-between-and-is-in-python
 
 # Lists
 Lists are awesome containers for storing a variety of objects
-
 ```python
 things_guaranteed_in_life = ['death', 'taxes', 'a new fifa game every year']
 
@@ -214,7 +207,6 @@ l2.reverse() # l2 = [23, 9, 7, 0.5]
 You can do really cool things with strings and lists in Python. Recall how to
 access a single element of a list `example_list_or_string[4]`. Well we can slice
 the list or string in various ways. 
-
 ```python
 fruits = ['banana', 'mango', 'tomato', 'plum', 'guava']
 # Yes tomatoes are fruits, good grief
@@ -368,6 +360,7 @@ while x > 0:
     print(x**2)
     x -= 1
 ```
+
 Video games use while loops, usually looping until the user signals to quit.
 
 # For loop
