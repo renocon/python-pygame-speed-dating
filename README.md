@@ -361,6 +361,14 @@ else:
 ```
 
 # While loop
+As with other languages, while loops execute as long as a condition is true
+```python
+x = 10
+while x > 0:
+    print(x**2)
+    x -= 1
+```
+Video games use while loops, usually looping until the user signals to quit.
 
 # For loop
 In Python you use a for loop to iterate over sequences (e.g. lists, strings,
