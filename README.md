@@ -398,12 +398,15 @@ for i in range(1, 101, 2):
 In your interpreter type `colours` and observe the result. Now type 
 `enumerate(colours)`, not exactly a list of tuples right? Also, type 
 `range(10)`, also not a list. Why is that? That's because unlike list, enumerate
-and range are generators, functions which return a generator iterator. I know,
-not helpful. It's a function that creates a series of values that can be 
-retrieved one by one by being called with the `next()` function. Generators are
-usefuly because unlike lists, they don't store all the values in memory, just
-the one that `next()` brings out. This is a lot more efficient. And think about
-it, the majority of loops you write only iterate over a sequence once. 
+and range are iterators, objects which support two functions: `__iter__` and
+`__next__`. Any class that implements those methods are considered iterators.
+Sometimes you don't need a class to get an iterator, you can use generator 
+functions which return a generator iterator. Generators **yield** values one by
+one with the `next()` function. Iterators and generators are useful because
+unlike lists, they don't store all the values in memory, just the one that
+`next()` or `__next__()` brings out. This is a lot more space efficient in most
+cases. And think about it, the majority of loops you write only iterate over a
+sequence once.
 
 # List Comprehensions
 Python takes a lot from functional languages like Haskell. For a long time FP
