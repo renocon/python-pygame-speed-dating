@@ -406,6 +406,36 @@ the one that `next()` brings out. This is a lot more efficient. And think about
 it, the majority of loops you write only iterate over a sequence once. 
 
 # List Comprehensions
+Python takes a lot from functional languages like Haskell. For a long time FP
+languages (certainly Haskell) has had List Comprehensions - syntactically
+beautiful ways to create lists:
+```python
+# You can do this:
+squares = []
+for i in range(101):
+    squares.append(i**2)
+
+# Or this
+squares = [i**2 for i in range(101)]
+
+# If you want odd numbers alone just say so
+odd_squares = [i**2 for i in range(101) if i % 2 == 1]
+
+# Let's bring back colours and make them all caps
+colours = ['blue', 'red', 'yellow']
+caps_colours = [c.upper() for c in colours] # ['BLUE', 'RED', 'YELLOW']
+```
+
+They may seem strange if you're seeing it for the first time but it's pretty
+simple:
+**[**expression **for** expression **in** sequence **if** condition **]**
+
+The if part of it is optional
+```python
+# Let's get numbers from 100 to 0 in decrements of 5, then minus the index from
+that number. Why? Because we can
+unusual_sequence = [x - i for i, x in enumerate(range(100, -1, -5))]
+```
 
 # Lambda, Map and Filter
 
