@@ -438,6 +438,25 @@ unusual_sequence = [x - i for i, x in enumerate(range(100, -1, -5))]
 ```
 
 # Lambda, Map and Filter
+Here's some more FP goodness Python has as well. Lambda functions are usually
+small, nameless functions you can create on the fly. If you have experience with
+JavaScript you probably made lambda functions before `function(args) {...}`.
+Map is useful utility function that applies a function to every element of a 
+sequence. Filter extracts elements from a sequence based on a condition defined
+in a function. Note that map and filter return iterators.
+Let's see them in action:
+```python
+squares = map(lambda x: x**2, range(101)) # iterator with 0, 1, 4, 9...
+evens = filter(lambda x: x % 2 == 0, squares) # iterator with 0, 4, 16...
+
+name_ages = [('prakrash', 18), ('janine', 67), ('bob', 45), ('jill', 22)]
+upper_case_name_ages = list(map(lambda x: (x[0].upper(), x[1]), name_ages))
+over_30 = list(filter(lambda x: x[1] > 30, name_ages))
+
+# For fun, see the list comprehension counterparts
+upper_case_name_ages_lc = [(x.upper(), y) for (x, y) in name_ages]
+over_30_lc = [x for x in name_ages if x[1] > 30]
+```
 
 # Functions
 
