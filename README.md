@@ -433,7 +433,7 @@ simple:
 The if part of it is optional
 ```python
 # Let's get numbers from 100 to 0 in decrements of 5, then minus the index from
-that number. Why? Because we can
+# that number. Why? Because we can
 unusual_sequence = [x - i for i, x in enumerate(range(100, -1, -5))]
 ```
 
