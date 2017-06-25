@@ -360,9 +360,49 @@ else:
     print('OK then, you keep on going')
 ```
 
-# For loop
-
 # While loop
+
+# For loop
+In Python you use a for loop to iterate over sequences (e.g. lists, strings,
+tuples)
+```python
+colours = ['blue', 'red', 'yellow']
+for colour in colours:
+    print(colour)
+
+for letter in colours[0]: # Taking blue
+    print(letter.upper())
+
+# Let me guess, you miss having an index right? You can use the enumerate 
+# funtion to get an index with your value:
+for i, colour in enumerate(colours):
+    print(i, colour)
+
+# If you need to iterate over numbers, you can use the range function
+# Range has three arguments(start, end, step)
+
+# If you enter one number then it's assumed that start is 0. This prints 0 - 9:
+for i in range(10):
+    print(i)
+
+# 1 - 100
+for i in range(1, 101):
+    print(i)
+
+# Odd numbers from 1 to 100
+for i in range(1, 101, 2):
+    print(i)
+```
+
+In your interpreter type `colours` and observe the result. Now type 
+`enumerate(colours)`, not exactly a list of tuples right? Also, type 
+`range(10)`, also not a list. Why is that? That's because unlike list, enumerate
+and range are generators, functions which return a generator iterator. I know,
+not helpful. It's a function that creates a series of values that can be 
+retrieved one by one by being called with the `next()` function. Generators are
+usefuly because unlike lists, they don't store all the values in memory, just
+the one that `next()` brings out. This is a lot more efficient. And think about
+it, the majority of loops you write only iterate over a sequence once. 
 
 # List Comprehensions
 
