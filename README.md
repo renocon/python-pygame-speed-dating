@@ -331,6 +331,34 @@ list(movie_ratings.values())
 ```
 
 # If-Elif-Else
+A common control flow mechanism are if-else statements to make decisions:
+```python
+reply = int(input('Enter your favourite number\n'))
+if reply < 0:
+    print('So negative')
+elif reply == 0: # elif = else if
+    print('What an unusual favourite number, you must be philosophical')
+else:
+    print('Positivity is awesome!')
+```
+
+Note the colon at the end of if statements and the identation that signifies
+which code is under which block. As you can imagine, you can have 0 or multiple
+elif statements, and 0 or 1 else statement. You can nest if statements too:
+
+```python
+emotion = input('How are you feeling?\n')
+if emotion == 'happy':
+    knows = input('Do you know it?')
+    if knows.lower() == 'y' or knows.lower == 'yes':
+        print('Clap your hands!')
+    else:
+        print('So what do you actually know? At least you\'re happy...')
+elif emotion == 'sad':
+    print('Laughter is the medicine you need!')
+else:
+    print('OK then, you keep on going')
+```
 
 # For loop
 
