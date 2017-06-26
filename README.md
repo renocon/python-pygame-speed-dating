@@ -462,5 +462,22 @@ over_30_lc = [x for x in name_ages if x[1] > 30]
 ```
 
 # Functions
+Functions are defined as follows:
+```python
+def hi_3_times():
+    print('hi ' * 3)
+
+# Functions can have lots of arguments
+def hi_n_times(n):
+    print('hi ' * n)
+
+# Functions can have default values
+def is_triangle(a=3, b=4, c=5):
+    return a + b > c and b + c > a and a + c > b
+
+is_triangle(7, 10, 5) # True
+is_triangle(2, 1, 1) # False
+is_triangle() # True
+```
 
 # Classes and Objects
