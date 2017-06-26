@@ -464,6 +464,7 @@ over_30_lc = [x for x in name_ages if x[1] > 30]
 # Functions
 Functions are defined as follows:
 ```python
+# The structure is def function_name(arguments)
 def hi_3_times():
     print('hi ' * 3)
 
