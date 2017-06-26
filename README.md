@@ -482,3 +482,61 @@ is_triangle() # True
 ```
 
 # Classes and Objects
+A class in Python is similar to classes in other languages. For those in Java
+and similarly designed OOP capable languages, note that Python does not have
+private variables. All attributes and methods (functions encapsulated in a
+class) are public. 
+```python
+class HelloWorld:
+    """Here is where you put useful docstrings"""
+    
+    # self is a reference to the object that's instantiated. 
+    # It fulfills the same roles as `this` is Java
+    # There's no need to call it self but it's the accepted community standard
+    # __init__ is the constructor function, this is what's called during object
+    # instantiation
+    def __init__(self):
+        """More docstrings"""
+        # TODO: some useful initialisation
+        pass # This keyword does nothing, it's used as a placeholder for code
+        # that still has to be written
+    
+    def greet(self, name):
+        """Return a greeting to user given name"""
+        return "Domo " + name
+
+# Let's create an object now
+hw = HelloWorld()
+print(hw.greet('Pooh Bear')) # Domo Pooh Bear
+
+# Use self to create instance attributes
+class Student():
+    """Represents a student in a school system"""
+    
+    def __init__(self, name, age, class_year=2017):
+        self.name = name # Create instance variables from the arguments passed
+        self.age = age
+        self.class_year = class_year
+        self.courses = [] # you can create attributes without getting paramaters
+    
+    def be_polite(self):
+        print('Good day!')
+
+# Create a student object
+class_pet = Student('Your name', 15) # the class will default to 2017 remember?
+class_pet.be_polite()
+
+# Let's say we're making a game, we might have a Sprite class that does some
+# common things for all players/enemies/objects.
+class Sprite():
+    pass
+
+# We can create a Player class which inherits from Sprite as follows:
+class Player(Sprite):
+    pass
+# You can inherit from multiple classes, just separate by a comma
+```
+
+Note the difference in naming conventions. Variables and functions are lower 
+case and words are separated by '_' characters. Classes use CamelCase for
+naming.
