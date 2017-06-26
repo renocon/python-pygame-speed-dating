@@ -10,6 +10,27 @@ The code we are writing here would work on all of Python 3 versions (and the
 vast majority on Python 2 as well) But you should use version 3.6 as it's the 
 latest and greatest at the time of writing.
 
+## Table of Contents
+- [Interpreted or Compiled?](#interpreted-or-compiled)
+- [Mind Your Space](#mind-your-space)
+- [Numbers](#numbers)
+- [Strings](#strings)
+- [Booleans](#booleans)
+	- [Conditions](#conditions)
+- [Lists](#lists)
+	- [More List Methods](#more-list-methods)
+	- [Fun With Indices](#fun-with-indices)
+	- [Length](#length)
+- [Tuples](#tuples)
+- [Dictionaries](#dictionaries)
+- [If-Elif-Else](#if-elif-else)
+- [While loop](#while-loop)
+- [For loop](#for-loop)
+- [List Comprehensions](#list-comprehensions)
+- [Lambda, Map and Filter](#lambda-map-and-filter)
+- [Functions](#functions)
+- [Classes and Objects](#classes-and-objects)
+
 # Interpreted or Compiled?
 Python is a programming language, a formal language specification designed to 
 give instructions to a computer. The Python language has many implementations: 
