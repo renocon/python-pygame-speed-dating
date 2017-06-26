@@ -361,7 +361,9 @@ while x > 0:
     x -= 1
 ```
 
-Video games use while loops, usually looping until the user signals to quit.
+Video games use while loops, usually looping until the user signals to quit. You
+can read more about the game loop here:
+http://openbookproject.net/thinkcs/python/english3e/pygame.html
 
 # For loop
 In Python you use a for loop to iterate over sequences (e.g. lists, strings,
