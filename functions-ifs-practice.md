@@ -139,3 +139,70 @@ def greet_4_people(name, name1, name2, name3):
 # Doesn't matter if 'name' is an argument in the first greet function, two
 # different functions can have the same argument name
 ```
+
+### Returning Values
+Well the functions we wrote previously print things to the screen but they don't
+return a value. Huh? Let's seee
+
+```python
+# Adds 5 to a number but doesn't return it
+def add_5_no_return(n):
+    print(n + 5)
+
+add_5_wrong(10) # Shows 15, so it works right?
+
+def add_5_return(n):
+    return n + 5
+
+add_5_wrong(10) # Shows 15
+```
+
+So... what's the issue? Well we get a number and we add 5 to it. It'd be nice
+if we can use it with other calculators as well:
+
+```python
+10 * add_5_returns(8) # 130
+10 * add_5_no_return(8) # Error!
+```
+
+The no return one fails. Why? Well like computers, functions get input -> 
+processes the input -> returns the output. With the functions we created that 
+used only print statements, Python returned nothing. Or more correctly, it 
+returned `None`. Python does it for you automatically if you don't explicitly
+return a value. 
+
+Knowing that Python reutrns None automatically, these two functions do the same
+thing:
+
+```python
+def favourite_number(n):
+    print(n*10)
+
+def favourite_number2(n):
+    print(n*10)
+    return
+```
+
+If you don't need to return a value, don't use the word. The `return` keyword
+also stops the execution of a program.
+
+```python
+def my_multiply(x, y):
+    print('We multiply the first number by 10')
+    return x * 10 * y
+    print('This never prints')
+
+my_multiply(7, 5)
+```
+
+### Exercises
+1. Create a function *rect_perimeter* that takes two arguments, length & width
+    and returns the perimeter
+2. Create a function *rect_area* that takes two arguments, length & width and
+    returns the area.
+3. Create a function *super_hi* that takes a name as an argument and **returns**
+    'hi' plus the name in all capital letters For e.g. super_hi('Marcus') 
+    returns 'HI MARCUS'. Use the function upper() on a string, 'test'.upper().
+
+
+## If Statements
