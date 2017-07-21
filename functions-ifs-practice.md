@@ -89,3 +89,53 @@ case the string to be printed. This is abstraction, we're saving coders from
 the details of how it works. Think about it, do you know how the `print`
 function works? You can learn how it does, but for your programs you don't need
 to. 
+
+### Anatomy of a Function
+You probably noticed from the earlier examples how we create functions. Let's
+look at the king_print function once more:
+
+```python
+def king_print(message):
+    print('For the glrory of the King')
+    print(message)
+    print('He is mighty!')
+```
+
+We first write def to tell python that we're **def**ining a function. We then
+write the function name, which is the same as naming a variable. We following
+with brackets and the arguments inside them. Arguments are inputs to your 
+function. We then write a colon, colons tell Python that there's a block of code
+coming right after. All the code of the function is indented.
+
+Let's see some more examples:
+
+```python
+# Functions do not always need arguments, just put nothing in the brackets
+def say_hi():
+    print('Hi!')
+
+say_hi() # You call them with nothing in the brackets as well
+
+# Argument names follow the same rule as variable names.
+def greet(name):
+    print('Hi ' + name)
+
+greet('bob') # Hi bob
+
+# You can have more than one argument
+def greet_2_people(name1, name2):
+    greet(name1)
+    greet(name2)
+
+# Notice arguments are separated by a comma and have different names
+# You can also use a function you defined within a function, why not right?
+
+# Ensure that each argument name is unique to the function
+# def greet_4_people(name, name name name) is wrong...
+def greet_4_people(name, name1, name2, name3):
+    greet_2_people(name, name1)
+    greet_2_people(name2, name3)
+
+# Doesn't matter if 'name' is an argument in the first greet function, two
+# different functions can have the same argument name
+```
