@@ -459,4 +459,22 @@ what the default value is.
 1. Write a function chosen_one which accepts a name. If the name is 'Neo' then
     print 'You are the chosen one' and return True. Otherwise let them know they
     aren't the chosen one and return false.
-2. 
+2. The Three Stooges were Moe, Larry and Shemp. Write a function we_miss_you 
+    that accepts a name. If the name is one of the Stooges then return 
+    "I'm gonna change my socks. What an experience!". Otherwise return "Don't"
+    forget to watch their show on YouTube!"
+3. Write a program that accepts 3 numbers from a user and determines if
+    they form a triangle. Three numbers for a triangle if and only if the
+    sum of two sides are greater than the third side. So for three sides
+    a, b and c - a + b >= c, b + c >= a and c + a >= b
+4. Create a guessing game where the computer generates a random number
+    between 1 and 10. If the user gets the answer correct they are
+    congratulated, if they get it wrong print "Hard lucks!".
+    * Remember, to get a random integer first import the random module:
+    `from random import randint` and specify the ranges for randint. E.g.
+    `randint(3,8)` - choose a number between 3 and 8 inclusive.
+5. Write a function happy_song that accepts mood as an argument. If the mood is
+    happy then ask the user if they know it. If they're happy and know it, print
+    "Clap your hands". If they're happy and don't know it then print "At least 
+    your're happy". If mood is sad then print "Laughter is the best medicine.".
+    For any other mood print "Just keep swimming".
