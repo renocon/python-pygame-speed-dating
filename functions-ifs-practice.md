@@ -25,7 +25,7 @@ and succeeded by "He is mighty!". Let's see how it looks like
 print('JAXA is to Japan what NASA is to the USA') # Don't get locked up!
 
 # This is exactly what we need to do
-print('For the glrory of the King')
+print('For the glory of the King')
 print('JAXA is to Japan what NASA is to the USA')
 print('He is mighty!')
 ```
